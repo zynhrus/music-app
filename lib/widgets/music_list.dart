@@ -42,11 +42,7 @@ class _MusicListState extends State<MusicList> {
                   var song = songs[index];
                   bool isPlay = context.watch<PlayCubit>().isPlay(song);
 
-                  return BlocBuilder<PlayCubit, Song>(
-                    builder: (context, state) {
-                      return musicItem(isPlay, context, song);
-                    },
-                  );
+                  return musicItem(isPlay, context, song);
                 },
               ),
             );
